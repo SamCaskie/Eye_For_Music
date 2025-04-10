@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="https://use.typekit.net/hhl3ful.css">
+</head>
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+@font-face {
+    font-family: 'Cartucho'; /*Custom typeface for headers*/
+    src: url('fonts/Cartucho.ttf') format('truetype');
+  }
+
+
+  
+body { /*Controls the main background and main overflow*/
+    background-color: rgb(50,53,100); 
+    background-image: url(bkrnd/kbjb.png);
+    background-position-y: 20%;
+    background-size: 100%;
+    overflow-x: hidden;
+    background-size: cover;
+}
+
+
+
+.container { /*Controls the navigation squares to enter the main sub pages*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    position: relative;
+    z-index: 10;
+    transform: translateY(420px);
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    background-position-y: -860px;
+    background-size: cover;
+}
+.Square { /*Controls the styles for the individual squares*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 80px;
+    border-radius: 10%;
+    background: rgb(228,41,56);
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1.75);
+    font-size: 18px;
+    font-weight: 700;
+}
+.Square:hover {
+    transform: scale(1.25);
+}
+.Square:hover {
+    background-color: rgb(50,53,100); 
+}
+.Square:hover {
+    border-radius: 50%;
+}
+
+
+
+
+.HBOX { /*Controls the positioning for the main content box*/
+    
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: -12em;
+}
+.HBOX .overlay { /*Controls the styles for the main content box*/
+    position: absolute;
+    width: 100vw;
+    height: 50vh;
+    background: rgb(0, 0, 0);
+    background-image: url(bkrnd/homebkrnd.png);
+    background-position-y: 40%;
+    background-position-x: -104px;
+    background-size: 110%;
+}
+
+
+
+.RunningHeader { /*Controls the "Home" and "Gallery" header buttons"*/
+    display: flex;
+    flex-direction: row;
+    gap: 78vw;
+    position: relative;
+    font-size: .85vw;
+    height: 5.5vh;
+    width: 100%;
+    transform: translateY(-95px);
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+}
+.home-button {/*Styles for the buttons"*/
+    height: 3.1vh;
+    width: fit-content;
+    color: rgb(255, 255, 255);
+    font-family: 'cartucho', sans-serif;
+    font-size: 1.3vw;
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1.75);
+}
+.home-button:hover {
+    transform: scale(1.1);
+}
+.home-button:hover {
+    color: rgb(50,53,100);
+}
+
+
+
+h1 { /*Controls the Header*/
+    font-size: 12vw;
+    font-family: 'cartucho', sans-serif;
+    transform: translateY(135px);
+    color: rgb(50,53,100);
+    letter-spacing: 0px;
+    line-height: 8rem;
+}
+
+h2 { /*Controls the Header*/
+    font-size: 11.5vw;
+    font-family: 'cartucho', sans-serif;
+    transform: translateY(-200px);
+    color: rgb(228,41,56);
+    letter-spacing: 5px;
+    line-height: 8rem;
+}
+
+h3 { /*Controls the first subheader*/ 
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-family: 'Kade', sans-serif;
+    font-size: 3vw;
+    text-align: center;
+    transform: translateY(160px);
+    font-weight: 600;
+}
+h4 { /*Controls the second subheader*/
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-family: 'Kade', sans-serif;
+    font-size: 2vw;
+    text-align: center;
+    transform: translateY(161px);
+    font-weight: 600;
+}
+
+i { /*Styles for the the marquee*/
+    color: rgb(50,53,100);
+    text-align: center;
+    line-height: 1.5;
+}
+
+
+
+
+.marquee { /*Controls positioning for the marquee*/
+            display: flex;
+            width: 100%;
+            background-attachment: fixed;
+            background-color: rgb(50,53,100);
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            align-items: baseline;
+            justify-content: baseline;
+            bottom: 0vh;
+        }
+
+        .marquee i { /* text Styles for the the marquee*/
+            font-family: 'Kade', sans-serif;
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            font-weight: 480;
+            animation: marquee 20s linear infinite;
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-110%);
+            }
+        }
+
+
+
+
+a { /*Controls the linked text for all nav buttons and header*/
+    color: rgb(255, 255, 255);
+    font-family: 'kade', sans-serif;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 300;
+}
+a:hover {
+    color: rgb(255, 255, 255);
+}
+a:hover {
+    font-weight: 700;
+}
+</style>
+<head>
+<body>
+    
+    <div class="container">
+        <div class="Square">
+            <a href="page1.html">90-'93</a>
+        </div>
+        <div class="Square">
+            <a href="page2.html">94-'96</a>
+        </div>
+        <div class="Square">
+            <a href="page3.html">97-'99</a>
+        </div>
+        <div class="Square">
+            <a href="page4.html">2000s+</a>
+        </div>
+    </div>
+    
+    <section>
+        <div class="RunningHeader">
+            <a href="main1.html" class="home-button">Home ✦</a>                       
+            <a href="main2.html" class="home-button">✦ Gallery</a>
+        </div>
+</section>
+
+    <section class="HBOX">
+        <div class="overlay"></div>
+        <div class="HBOX-content">
+            <h1>EYE FOR MUSIC</h1>
+            <h3> A vintage CD cover art archive</h3>
+            <H4>(From the 1990s to early 2000s:)</H4>
+            <h2>EYE FOR MUSIC</h2>
+        </div>
+    </section>
+
+    <section class="marquee">
+        <i>ENTER THE ARCHIVE! --- Find cool CD covers, 
+            graphic design inspiration, songs, artists, 
+            and more by looking through some of the most 
+            intresting CD cover artworks from the 90s until the early 2000s.</i>
+    </section>
+</body>
+</html>
